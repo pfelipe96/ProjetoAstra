@@ -1,4 +1,4 @@
-var app = angular.module('iniciarAPP', ['starter.controllers', 'ui.router']);
+var app = angular.module('starter', ['ui.router', 'starter.controllers']);
 
 app.config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
@@ -12,24 +12,27 @@ app.config(function($stateProvider, $urlRouterProvider) {
       url: '/investidores',
       templateUrl: 'investidores.html',
       controller: 'InvestidoresController'
+    })
+
+    .state('cadastro-investidor', {
+      url: '/cadastro-investidor',
+      templateUrl: 'cadastro-investidor.html',
+      controller: 'CadastroInvestidorController'
+    })
+
+    .state('detalhe-ValorAtual', {
+      url: '/detalhe-ValorAtual',
+      templateUrl: 'detalhe-ValorAtual.html',
+      controller: 'DetalheValorAtualController'
+    })
+
+    .state('detalhe-investidor', {
+      url: '/detalhe-investidor',
+      templateUrl: 'detalhe-investidor.html',
+      controller: 'DetalheInvestidorController'
     });
-    //
-    // .state('app', {
-    //   url: '/app',
-    //   abstract: true,
-    //   templateUrl: 'templates/menu.html',
-    //   controller: 'AppController'
-    // })
-    //
-    //   .state('app.perfil', {
-    //     url: '/perfil',
-    //     views: {
-    //       'menuContent': {
-    //         templateUrl: 'templates/perfil.html',
-    //         controller: 'PerfilController'
-    //       }
-    //     }
-    //   });
+
+
     // if none of the above states are matched, use this as the fallback
     $urlRouterProvider.otherwise('/login');
   });

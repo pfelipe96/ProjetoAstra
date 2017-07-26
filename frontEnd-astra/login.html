@@ -1,15 +1,7 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <link rel="stylesheet" href="materialize/css/materialize.min.css" media="screen,projection">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles-index.css">
-    <meta charset="utf-8">
-    <title>Login - Astra Investimentos</title>
-  </head>
-  <body class="container">
-    <section>
+  <link rel="stylesheet" href="css/styles-index.css">
+  <title>Login - Astra Investimentos</title>
+
+<section>
         <div class="logo-astra">
           <img src="imagens/astra-investiments-lcc-logo.gif">
         </div>
@@ -20,11 +12,11 @@
                <div class="row">
                  <div class="input-field col l6 s12">
                    <i class="material-icons prefix">account_circle</i>
-                   <input id="email" type="email" class="validate" placeholder="E-mail">
+                   <input id="email" type="email" class="validate" placeholder="E-mail" ng-model="email">
                  </div>
                  <div class="input-field col l6 s12">
                    <i class="material-icons prefix">lock_outline</i>
-                   <input id="password" type="password" class="validate" placeholder="Senha">
+                   <input id="password" type="password" class="validate" placeholder="Senha" ng-model="password">
                  </div>
                </div>
              </form>
@@ -45,8 +37,4 @@
           </div>
         </div>
       </div>
-    </section>
-    <script src="javascript/angular.min.js"></script>
-    <script src="javascript/app.js"></script>
-  </body>
-</html>
+</section>
