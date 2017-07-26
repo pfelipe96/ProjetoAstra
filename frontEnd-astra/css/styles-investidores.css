@@ -1,0 +1,30 @@
+#search::-webkit-input-placeholder{
+    color:#546e7a ;
+    font-style: bold;
+}
+
+.button-search{
+  margin-top: 20px;
+}
+
+.button-search button{
+  padding: 0 1rem;
+}
+
+/*.h1-investidores button{
+}*/
+
+.h1-header{
+  text-align: center;
+}
+
+button.button-delete-investidor{
+  float: right;
+}
+.button-delete-investidor i{
+  text-align: center;
+}
+
+.row{
+  margin: auto;
+}
