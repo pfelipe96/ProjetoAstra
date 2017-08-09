@@ -1,7 +1,9 @@
 <link rel="stylesheet" href="css/styles-detalheinvestidor.css">
-<title>Detalhe do Investidor ((X)) - Astra Investimentos</title>
+<title>Detalhe do Investidor - Astra Investimentos</title>
 
-<section>
+<ng-include src="'header.html'"></ng-include>
+
+<section class="container">
     <div>
       <button class="button-voltar btn waves-effect waves-light blue" type="submit" ng-click="buttonBack()"> Voltar
         <i class="material-icons left">arrow_back</i>
@@ -9,17 +11,17 @@
     </div>
     <div class="h1-header card">
       <div class="card-content">
-        <h3>Informações do Investidor ((X))</h3>
+        <h3>Informações do Investidor</h3>
       </div>
     </div>
     <div class="card">
       <div class="card-content">
-        <h6>Nome: Paulo Felipe</h6>
-        <h6>CPF: 363.816.708-94</h6>
-        <h6>Data de Nascimento: 15/03/1996</h6>
-        <h6>Endereço: Avenida Roque Petroni Jr, Nº 160, CEP: 04707000, São Paulo, SP</h6>
-        <h6>TEL: (11) 50421212 ou CEL: (11) 984422686</h6>
-        <h6>Valor da aplicação inicial: R$: 150.000,00 reais | rentabilidade: 1.40% ao mês</h6>
+        <h6>Nome: {{investidor.nome}}</h6>
+        <h6>CPF: {{investidor.cpf}}</h6>
+        <h6>Data de Nascimento: {{investidor.dataNasc}}</h6>
+        <h6>Endereço: {{investidor.logradouro}}, Nº {{investidor.enderecoNumero}}, CEP: {{investidor.enderecoCEP}}, {{investidor.enderecoCidade}}, {{investidor.enderecoEstado}}</h6>
+        <h6>TEL: {{investidor.DDDtel}} {{investidor.tel}} ou CEL: {{investidor.DDDcel}} {{investidor.cel}}</h6>
+        <h6>Valor da aplicação inicial: R$: {{investidor.aplicacaoInicial}} reais | rentabilidade: {{investidor.porcentagemAplicacao}}% ao mês</h6>
       </div>
     </div>
     <div class="row">
